@@ -1,3 +1,4 @@
+/* Estilos padrão para telas maiores */
 body {
     background: linear-gradient(to bottom right, black 44%, gray);
     width: 100%;
@@ -14,7 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: row; /* Padrão para telas grandes */
     position: relative;
 }
 
@@ -22,7 +23,7 @@ body {
 .small img.aranha {
     position: absolute;
     top: 10px;
-    right: 10px; /* No lado direito */
+    right: 10px;
     width: 150px; /* Tamanho ajustado para celular */
     height: auto;
     z-index: 1;
@@ -30,10 +31,10 @@ body {
 
 .small img.teia {
     position: absolute;
-    width: 160px; /* Tamanho ajustado para celular */
+    width: 160px;
     height: auto;
     top: 20%;
-    right: 10%; 
+    right: 10%;
     z-index: 1;
 }
 
@@ -80,28 +81,91 @@ body {
 }
 
 /* Responsividade para telas menores (celular) */
-@media (max-width: 600px) {
+@media (max-width: 360px) {
     .container-flex {
-
+        flex-direction: column; /* Garante que o layout será empilhado no celular */
     }
 
     .small img.aranha {
         position: absolute;
-        top: 200px;
+        top: 150px; /* Ajuste da posição vertical no celular */
         right: 10px; /* Ajusta a aranha à direita */
         width: 80px; /* Tamanho reduzido para celular */
     }
     
     .small img.teia {
         position: absolute;
-        top: 250px;
+        top: 200px; /* Ajuste da posição vertical no celular */
         right: 75px; /* Ajusta a teia à direita */
         width: 80px; /* Tamanho reduzido para celular */
     }
 
+    .imgs {
+        width: 90vw; /* Reduzindo as imagens para dar mais espaço */
+        max-width: 280px; /* Ajuste para celular */
+    }
+}
+
+/* Para dispositivos móveis mais largos */
+@media (max-width: 480px) {
+    .small img.aranha {
+        width: 100px; /* Ajuste para dispositivos maiores que 360px */
+    }
+
+    .small img.teia {
+        width: 110px;
+    }
 
     .imgs {
-        width: 90vw; /* Reduzindo mais as imagens para dar mais espaço */
-        max-width: 280px; /* Ajuste para celular */
+        width: 95vw;
+        max-width: 300px;
+    }
+}
+
+/* Para smartphones com tela um pouco maior */
+@media (max-width: 600px) {
+    .small img.aranha {
+        width: 120px;
+    }
+
+    .small img.teia {
+        width: 130px;
+    }
+
+    .imgs {
+        width: 90vw;
+        max-width: 320px;
+    }
+}
+
+/* Para tablets pequenos ou dispositivos com tela um pouco maior */
+@media (max-width: 768px) {
+    .small img.aranha {
+        width: 140px;
+    }
+
+    .small img.teia {
+        width: 150px;
+    }
+
+    .imgs {
+        width: 80vw;
+        max-width: 350px;
+    }
+}
+
+/* Para tablets grandes e smartphones de tela grande */
+@media (max-width: 1024px) {
+    .small img.aranha {
+        width: 160px;
+    }
+
+    .small img.teia {
+        width: 170px;
+    }
+
+    .imgs {
+        width: 75vw;
+        max-width: 380px;
     }
 }
