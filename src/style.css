@@ -7,42 +7,34 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 0 10px; /* Pequena margem para evitar cortes na tela */
 }
 
-/* Ajuste da aranha e das teias */
+/* Aranha e Teia agora ficam no lado direito */
 .small img.aranha {
     position: absolute;
-    top: 5%;
-    right: 5%;
-    width: 200px;
+    top: 10px; 
+    right: 10px; /* Agora está do lado direito */
+    width: 200px; 
     height: auto;
-}
-
-.small img.teia,
-.small img.teia2 {
-    position: absolute;
-    width: 180px;
-    height: auto;
+    z-index: 1; /* Garante que não fique sobre as imagens */
 }
 
 .small img.teia {
+    position: absolute;
+    width: 180px; 
+    height: auto;
     top: 20%;
-    right: 15%;
+    right: 15%; /* Agora está do lado direito */
+    z-index: 1;
 }
 
-.small img.teia2 {
-    top: 60%;
-    right: 17%;
-}
-
-/* Ajuste para responsividade */
+/* Configuração do carrossel */
 .imgs {
     position: relative;
-    width: 90vw; /* Usa largura relativa */
+    width: 90vw; 
     max-width: 350px;
     height: auto;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1/1; 
     overflow: hidden;
     border-radius: 10px;
 }
@@ -59,11 +51,11 @@ body {
     opacity: 1;
 }
 
-/* Caixa da mensagem */
+/* Estilização do container */
 .container {
     box-shadow: 0 2px 50px rgba(255, 255, 255, 0.3);
     border-radius: 10px;
-    width: 80%;
+    width: 80%; 
     max-width: 800px;
     margin-top: 20px;
     text-align: center;
@@ -71,38 +63,25 @@ body {
     padding: 20px;
 }
 
-/* Ajuste do texto */
 .container h3 {
-    font-size: 1.5rem; /* Maior para melhor leitura */
+    font-size: 1.2rem; 
     line-height: 1.6;
     font-family: Arial, sans-serif;
     margin: 20px;
 }
 
-/* RESPONSIVIDADE PARA TELAS MENORES */
+/* Responsividade para telas menores */
 @media (max-width: 600px) {
     .small img.aranha {
         width: 120px;
-        top: 2%;
-        right: 2%;
     }
     
-    .small img.teia,
-    .small img.teia2 {
+    .small img.teia {
         width: 130px;
     }
 
-    .imgs {
-        width: 95vw; /* Ajusta ao tamanho da tela */
-        max-width: 300px;
-    }
-
-    .container {
-        width: 95%;
-    }
-
     .container h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin: 15px;
     }
 }
