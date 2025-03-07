@@ -9,32 +9,41 @@ body {
     overflow: hidden;
 }
 
+/* Contêiner para as imagens e os elementos (aranha e teia) no celular */
+.container-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+}
+
 /* Aranha e Teia agora ficam no lado direito */
 .small img.aranha {
     position: absolute;
-    top: 10px; 
-    right: 10px; /* Agora está do lado direito */
-    width: 200px; 
+    top: 10px;
+    right: 10px; /* No lado direito */
+    width: 150px; /* Tamanho ajustado para celular */
     height: auto;
-    z-index: 1; /* Garante que não fique sobre as imagens */
+    z-index: 1;
 }
 
 .small img.teia {
     position: absolute;
-    width: 180px; 
+    width: 160px; /* Tamanho ajustado para celular */
     height: auto;
     top: 20%;
-    right: 15%; /* Agora está do lado direito */
+    right: 10%; 
     z-index: 1;
 }
 
-/* Configuração do carrossel */
+/* Ajuste do carrossel para celular */
 .imgs {
     position: relative;
-    width: 90vw; 
-    max-width: 350px;
+    width: 100vw; /* Reduzido para dar espaço para a aranha e teia */
+    max-width: 320px; /* Tamanho reduzido para celular */
     height: auto;
-    aspect-ratio: 1/1; 
+    aspect-ratio: 1/1;
     overflow: hidden;
     border-radius: 10px;
 }
@@ -70,18 +79,29 @@ body {
     margin: 20px;
 }
 
-/* Responsividade para telas menores */
+/* Responsividade para telas menores (celular) */
 @media (max-width: 600px) {
+    .container-flex {
+
+    }
+
     .small img.aranha {
-        width: 120px;
+        position: absolute;
+        top: 200px;
+        right: 10px; /* Ajusta a aranha à direita */
+        width: 80px; /* Tamanho reduzido para celular */
     }
     
     .small img.teia {
-        width: 130px;
+        position: absolute;
+        top: 250px;
+        right: 75px; /* Ajusta a teia à direita */
+        width: 80px; /* Tamanho reduzido para celular */
     }
 
-    .container h3 {
-        font-size: 1rem;
-        margin: 15px;
+
+    .imgs {
+        width: 90vw; /* Reduzindo mais as imagens para dar mais espaço */
+        max-width: 280px; /* Ajuste para celular */
     }
 }
