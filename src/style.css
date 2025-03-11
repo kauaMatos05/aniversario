@@ -100,16 +100,20 @@ body {
 
 /* Para tablets pequenos ou dispositivos com tela um pouco maior */
 @media (max-width: 768px) {
+    body {
+        background: linear-gradient(to bottom right, black 22%, gray);
+       
+    }
     .small img.aranha {
         width: 65px;
-        top: 25%;
+
     
     }
 
     .small img.teia {
         width: 50px;
         right: 17%;
-        top: 30%;
+        top: 7%;
     }
 
     .imgs {
