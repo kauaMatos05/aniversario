@@ -80,24 +80,6 @@ body {
     margin: 20px;
 }
 
-
-
-/* Para smartphones com tela um pouco maior */
-@media (max-width: 600px) {
-    .small img.aranha {
-        width: 70px;
-    }
-
-    .small img.teia {
-        width: 130px;
-    }
-
-    .imgs {
-        width: 90vw;
-        max-width: 320px;
-    }
-}
-
 /* Para tablets pequenos ou dispositivos com tela um pouco maior */
 @media (max-width: 768px) {
     body {
