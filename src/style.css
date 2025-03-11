@@ -80,52 +80,12 @@ body {
     margin: 20px;
 }
 
-/* Responsividade para telas menores (celular) */
-@media (max-width: 360px) {
-    .container-flex {
-        flex-direction: column; /* Garante que o layout será empilhado no celular */
-    }
 
-    .small img.aranha {
-        position: absolute;
-        top: 150px; /* Ajuste da posição vertical no celular */
-        right: 10px; /* Ajusta a aranha à direita */
-        width: 80px; /* Tamanho reduzido para celular */
-    }
-    
-    .small img.teia {
-        position: absolute;
-        top: 200px; /* Ajuste da posição vertical no celular */
-        right: 75px; /* Ajusta a teia à direita */
-        width: 80px; /* Tamanho reduzido para celular */
-    }
-
-    .imgs {
-        width: 90vw; /* Reduzindo as imagens para dar mais espaço */
-        max-width: 280px; /* Ajuste para celular */
-    }
-}
-
-/* Para dispositivos móveis mais largos */
-@media (max-width: 480px) {
-    .small img.aranha {
-        width: 100px; /* Ajuste para dispositivos maiores que 360px */
-    }
-
-    .small img.teia {
-        width: 110px;
-    }
-
-    .imgs {
-        width: 95vw;
-        max-width: 300px;
-    }
-}
 
 /* Para smartphones com tela um pouco maior */
 @media (max-width: 600px) {
     .small img.aranha {
-        width: 120px;
+        width: 70px;
     }
 
     .small img.teia {
@@ -141,31 +101,20 @@ body {
 /* Para tablets pequenos ou dispositivos com tela um pouco maior */
 @media (max-width: 768px) {
     .small img.aranha {
-        width: 140px;
+        width: 65px;
+        top: 25%;
+    
     }
 
     .small img.teia {
-        width: 150px;
+        width: 50px;
+        right: 17%;
+        top: 30%;
     }
 
     .imgs {
-        width: 80vw;
-        max-width: 350px;
-    }
-}
-
-/* Para tablets grandes e smartphones de tela grande */
-@media (max-width: 1024px) {
-    .small img.aranha {
-        width: 160px;
-    }
-
-    .small img.teia {
-        width: 170px;
-    }
-
-    .imgs {
-        width: 75vw;
-        max-width: 380px;
+        right: 10%;
+        width: 60vw;
+        max-width: 300px;
     }
 }
